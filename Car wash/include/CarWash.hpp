@@ -1,30 +1,33 @@
 #ifndef CARWASH_HPP
 #define CARWASH_HPP
 
-#include "Stage.hpp"
-#include "Worker.hpp"
-#include "Event.hpp"
-#include "Car.hpp"
+#include "defs.hpp"
+#include "stage.hpp"
+#include "worker.hpp"
+#include "event.hpp"
+#include "car.hpp"
 #include <map>
 #include <vector>
+#include <iostream>
+#include <algorithm>
+#include <sstream>
+#include <limits>
 
-
-using namespace std;
-
-class CarWash{
-    public:
-    CarWash(map<unsigned int, Stage*> st, map<unsigned int, Worker*> wo);
+class CarWash
+{
+public:
+    CarWash(CSV &st, CSV &wo);
     void pass_time(unsigned int t);
     void do_commands();
     void add_car();
-    void print_timeline(vector<Event>& timeline);
+    void print_timeline(vector<Event> &timeline);
     ~CarWash();
 
-    private:
-    map<unsigned int, Stage*> stages;
-    map<unsigned int, Worker*> workers;
+private:
+    map<unsigned int, Stage *> stages;
+    map<unsigned int, Worker *> workers;
     unsigned int time;
-    map<unsigned int, Car*> cars;
+    map<unsigned int, Car *> cars;
 };
 
 #endif

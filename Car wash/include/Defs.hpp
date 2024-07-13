@@ -1,6 +1,13 @@
 #ifndef DEFS_HPP
 #define DEFS_HPP
 
+#include <map>
+#include <list>
+#include <string>
+
+using namespace std;
+typedef list<map<string, unsigned int>> CSV;
+
 #define STAGES_FILE_INDEX 1
 #define WORKERS_FILE_INDEX 2
 #define TIME_UNIT 1
@@ -24,4 +31,5 @@
 #define CARS_IN_QUEUE_REPORT "Number of cars in queue: "
 #define CARS_BEING_WASHED_REPORT "Number of cars being washed: "
 #define INCOME_REPORT "Income: "
+
 #endif
