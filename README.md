@@ -17,8 +17,8 @@ Some of the information for the program is provided as CSV files. Below is a des
 | Attribute | Description | Datatype |
 | --- | --- | --- |
 | Id | Each worker's unique Id | Unsigned int |
-| Stage-id | Stage's Id where worker works | Unsigned int |
-| Time-to-finish | Required time for worker to wash a car | Unsigned int |
+| Stage-id | Stage's Id where the worker works | Unsigned int |
+| Time-to-finish | Required time for the worker to wash a car | Unsigned int |
 
 Input files are given through command line arguments as shown below:
 ```console
@@ -50,3 +50,48 @@ Output Format:
 ```console
 <time> Car <carID>: Arrived -> <position>
 ```
+
+**Get Car Status**
+
+This command checks the status of a car. The status of the car can be in one of four states:
+
+- `In line`: The car is in the queue for a stage.
+- `In service`: The car is currently undergoing a stage.
+- `Done`: The car has finished all stages.
+- `NOT FOUND`: There is no car with the given ID.
+For the "In line" and "In service" states, the name of the respective stage should also be mentioned.
+
+Command format:
+```console
+get_car_status <carID>
+```
+Output Format:
+```console
+<In line/In service/Done>[: Stage/QueueID]
+```
+```console
+NOT FOUND
+```
+**Get Worker Status**
+
+This command queries the status of a worker. The status of the worker can be in one of three states:
+- `Idle`: The worker is available.
+- `Working: <carID>`: The worker is currently working on a car.
+- `NOT FOUND`: There is no worker with the given ID.
+
+Command format:
+```console
+get_worker_status <workerID>
+```
+Output Format:
+```console
+Idle
+```
+```console
+Working: <carID>
+```
+```console
+NOT FOUND
+```
+
+**Get Stage Status**
