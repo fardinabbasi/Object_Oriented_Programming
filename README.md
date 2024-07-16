@@ -29,11 +29,11 @@ Input files are given through command line arguments as shown below:
 
 In this command, time advances by the specified amount. A report detailing the changes in the status of the cars during this time is provided.
 
-Command format:
+<ins>Command format</ins>:
 ```console
 pass_time <number_of_time_units>
 ```
-Output Format:
+<ins>Output Format</ins>:
 ```console
 <time> Car <ID>: <previous_position> -> <current_position>
 ```
@@ -42,11 +42,11 @@ Output Format:
 
 This command adds a car with specified wash stages to the car wash at the current time. The number of wash stages is not fixed and can vary for different cars. These wash stages are provided as command arguments and are separated by spaces. It is guaranteed that the requested wash stages exist.
 
-Command format:
+<ins>Command format</ins>:
 ```console
 car_arrival <stagesIDs>
 ```
-Output Format:
+<ins>Output Format</ins>:
 ```console
 <time> Car <carID>: Arrived -> <position>
 ```
@@ -61,11 +61,11 @@ This command checks the status of a car. The status of the car can be in one of 
 - `NOT FOUND`: There is no car with the given ID.
 For the "In line" and "In service" states, the name of the respective stage should also be mentioned.
 
-Command format:
+<ins>Command format</ins>:
 ```console
 get_car_status <carID>
 ```
-Output Format:
+<ins>Output Format</ins>:
 ```console
 <In line/In service/Done>[: Stage/QueueID]
 ```
@@ -79,11 +79,11 @@ This command queries the status of a worker. The status of the worker can be in 
 - `Working: <carID>`: The worker is currently working on a car.
 - `NOT FOUND`: There is no worker with the given ID.
 
-Command format:
+<ins>Command format</ins>:
 ```console
 get_worker_status <workerID>
 ```
-Output Format:
+<ins>Output Format</ins>:
 ```console
 Idle
 ```
@@ -100,11 +100,11 @@ This command provides a report on the status of a stage, including the number of
 
 If there is no stage with the given ID, `NOT FOUND` will be printed.
 
-Command format:
+<ins>Command format</ins>:
 ```console
 get_stage_status <stageID>
 ```
-Output Format:
+<ins>Output Format</ins>:
 ```console
 Number of washed cars: <Count>
 Number of cars in queue: <Count>
