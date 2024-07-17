@@ -59,6 +59,7 @@ This command checks the status of a car. The status of the car can be in one of 
 - `In service`: The car is currently undergoing a stage.
 - `Done`: The car has finished all stages.
 - `NOT FOUND`: There is no car with the given ID.
+
 For the "In line" and "In service" states, the name of the respective stage should also be mentioned.
 
 <ins>Command format</ins>:
