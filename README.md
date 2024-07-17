@@ -3,7 +3,7 @@ In this repo, you will find two projects demonstrating Object-Oriented Programmi
 ## LMS
 
 ## Car wash
-In this project, you will design a system for managing a car wash, focusing on tracking the status of employees, cars, and different sections of the car wash. Cars go through several stages of washing as they move through the car wash. Each car proceeds through these stages in sequence, and if there is no available worker for a specific stage, the car waits in line until a worker becomes available. Finally, after completing the last stage, the car exits the car wash.
+In this project, a system for managing a car wash is designed, focusing on tracking the status of employees, cars, and different sections of the car wash. Cars go through several stages of washing as they move through the car wash. Each car proceeds through these stages in sequence, and if there is no available worker for a specific stage, the car waits in line until a worker becomes available. Finally, after completing the last stage, the car exits the car wash.
 ### Input Files
 Some of the information for the program is provided as CSV files. Below is a description of each file.
 
