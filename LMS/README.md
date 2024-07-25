@@ -24,7 +24,7 @@ Some of the information for the program is provided as CSV files. Below is a des
 | cid | Course ID | Unsigned int |
 | name | Each course's name | String |
 | credit | Each course's credit | Unsigned int |
-| prerequisite | Minimum allowed semester to take the course | Unsigned int |
+| prerequisite | Minimum allowed semesters to take the course | Unsigned int |
 | majors_id | Allowed majors to take the course  | unsigned int |
 
 **teachers.csv**
