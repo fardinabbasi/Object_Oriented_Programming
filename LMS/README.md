@@ -152,6 +152,7 @@ We have received <number_of_requests> requests for the teaching assistant positi
 <second_person_information>:
 ...
 ```
+Note that the terms `reject/accept` are entered by the instructor, and upon pressing Enter, the next person's information is displayed. If the entered term is anything other than `reject/accept`, pressing Enter will display the previous person's information again.
 ### Apply a TA Position
 <ins>Command format</ins>:
 ```console
@@ -279,4 +280,9 @@ GET my_courses ?
 ```console
 <id> <name> <capacity> <professor> <time> <exam_date> <class_number>
 ...
+```
+## How to run
+To run the test cases automatically, execute the following bash script:
+```console
+./judge.sh
 ```
