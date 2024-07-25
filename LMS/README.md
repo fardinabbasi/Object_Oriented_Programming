@@ -86,7 +86,7 @@ If a user enters a command from another user's list of commands, this message wi
 Permission Denied
 ```
 
-**Error Handling**
+**Exception Handling**
 
 The prioritization of error handling in the execution of the program is as follows:
 
