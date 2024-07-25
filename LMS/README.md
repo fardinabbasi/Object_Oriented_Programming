@@ -98,3 +98,182 @@ The prioritization of error handling in the execution of the program is as follo
 
 4. Finally, specific cases of each command are examined to ensure that only one of the special cases is encountered (multiple errors should not occur here).
 
+### Send Post
+<ins>Command format</ins>:
+```console
+POST post ? title <title> message <message> image <image_address>
+```
+<ins>Output Format</ins>:
+```console
+OK
+```
+```console
+Bad Request
+```
+### Add Profile Photo
+<ins>Command format</ins>:
+```console
+POST profile_photo ? photo <photo_address>
+```
+<ins>Output Format</ins>:
+```console
+OK
+```
+```console
+Bad Request
+```
+### Add Post to Course Channel
+<ins>Command format</ins>:
+```console
+POST course_post ? id <id> title <title> message <message> image <image_address>
+```
+<ins>Output Format</ins>:
+```console
+OK
+```
+```console
+Bad Request
+```
+```console
+Not Found
+```
+```console
+Permission Denied
+```
+### View Course Channel's Posts
+<ins>Command format</ins>:
+```console
+GET course_channel ? id <id>
+```
+<ins>Output Format</ins>:
+```console
+<id> <name> <capacity> <professor> <time> <exam_date> <class_number>
+<post_id> <author_name> “<title>”
+<post_id> <author_name> “<title>” ...
+```
+```console
+OK
+```
+```console
+Bad Request
+```
+```console
+Not Found
+```
+```console
+Permission Denied
+```
+### View a Post from Course Channel 
+<ins>Command format</ins>:
+```console
+GET course_post ? id <id> post_id <post_id>
+```
+<ins>Output Format</ins>:
+```console
+<id> <name> <capacity> <professor> <time> <exam_date>
+<class_number>
+<post_id> <author_name> “<title>” “<message>”
+```
+```console
+OK
+```
+```console
+Bad Request
+```
+```console
+Not Found
+```
+```console
+Permission Denied
+```
+### Create a TA Form
+<ins>Command format</ins>:
+```console
+POST ta_form ? course_id <course_id> message ”<message>”
+```
+<ins>Output Format</ins>:
+```console
+OK
+```
+```console
+Bad Request
+```
+```console
+Not Found
+```
+```console
+Permission Denied
+```
+### Close a TA Form
+<ins>Command format</ins>:
+```console
+POST close_ta_form ? id <id>
+```
+<ins>Output Format</ins>:
+```console
+We have received <number_of_requests> requests for the teaching assistant position
+<first_person_information>:
+<second_person_information>:
+...
+```
+```console
+Bad Request
+```
+```console
+Not Found
+```
+### Apply a TA Position
+<ins>Command format</ins>:
+```console
+POST ta_request ? professor_id <professor_id> form_id <form_id>
+```
+<ins>Output Format</ins>:
+```console
+OK
+```
+```console
+Bad Request
+```
+```console
+Not Found
+```
+```console
+Permission Denied
+```
+### Login
+<ins>Command format</ins>:
+```console
+POST login ? id <id> password <password>
+```
+<ins>Output Format</ins>:
+```console
+OK
+```
+```console
+Bad Request
+```
+```console
+Not Found
+```
+```console
+Permission Denied
+```
+### Logout
+<ins>Command format</ins>:
+```console
+POST logout ?
+```
+<ins>Output Format</ins>:
+```console
+OK
+```
+```console
+Bad Request
+```
+```console
+Not Found
+```
+```console
+Permission Denied
+```
+### View Offered Courses
