@@ -45,5 +45,5 @@ For more details, read [this](https://github.com/fardinabbasi/Object_Oriented_Pr
 
 - **Course**: Advanced Programming [ECE 119]
 - **Semester**: Spring 2024
-- **Institution:** [School of Electrical & Computer Engineering](https://ece.ut.ac.ir/en/), [College of Engineering](https://eng.ut.ac.ir/en)ec, [University of Tehran](https://ut.ac.ir/en)
+- **Institution:** [School of Electrical & Computer Engineering](https://ece.ut.ac.ir/en/), [College of Engineering](https://eng.ut.ac.ir/en), [University of Tehran](https://ut.ac.ir/en)
 - **Instructor:** [Dr. Khosravi](https://ramtung.ir/)
