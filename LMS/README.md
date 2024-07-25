@@ -98,6 +98,16 @@ The prioritization of error handling in the execution of the program is as follo
 
 4. Finally, specific cases of each command are examined to ensure that only one of the special cases is encountered (multiple errors should not occur here).
 
+### Login
+<ins>Command format</ins>:
+```console
+POST login ? id <id> password <password>
+```
+### Logout
+<ins>Command format</ins>:
+```console
+POST logout ?
+```
 ### Send Post
 <ins>Command format</ins>:
 ```console
@@ -157,16 +167,6 @@ Note that the terms `reject/accept` are entered by the professor, and upon press
 <ins>Command format</ins>:
 ```console
 POST ta_request ? professor_id <professor_id> form_id <form_id>
-```
-### Login
-<ins>Command format</ins>:
-```console
-POST login ? id <id> password <password>
-```
-### Logout
-<ins>Command format</ins>:
-```console
-POST logout ?
 ```
 ### View Offered Courses
 <ins>Command format</ins>:
