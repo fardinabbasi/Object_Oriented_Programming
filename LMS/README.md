@@ -32,7 +32,7 @@ Some of the information for the program is provided as CSV files. Below is a des
 | --- | --- | --- |
 | pid | Professor ID | Unsigned int |
 | name | Each professors's name | String |
-| major_id | Each Professor's major | Unsigned int |
+| major_id | Each professor's major | Unsigned int |
 | position | Each professor's position | String |
 | password | Each professor's password | String |
 
