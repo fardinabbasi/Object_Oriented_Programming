@@ -39,3 +39,11 @@ For more details, read [this](https://github.com/fardinabbasi/Object_Oriented_Pr
 In this project, a system for managing a car wash is designed, focusing on tracking the status of employees, cars, and different sections of the car wash. Cars go through several stages of washing as they move through the car wash. Each car proceeds through these stages in sequence, and if there is no available worker for a specific stage, the car waits in line until a worker becomes available. Finally, after completing the last stage, the car exits the car wash.
 
 For more details, read [this](https://github.com/fardinabbasi/Object_Oriented_Programming/blob/main/Car%20wash/README.md).
+
+
+## Course Project for Advanced Programming
+
+- **Course**: Advanced Programming [ECE 119]
+- **Semester**: Spring 2024
+- **Institution:** [School of Electrical & Computer Engineering](https://ece.ut.ac.ir/en/), [College of Engineering](https://eng.ut.ac.ir/en)ec, [University of Tehran](https://ut.ac.ir/en)
+- **Instructor:** [Dr. Khosravi](https://ramtung.ir/)
