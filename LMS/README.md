@@ -103,42 +103,15 @@ The prioritization of error handling in the execution of the program is as follo
 ```console
 POST post ? title <title> message <message> image <image_address>
 ```
-<ins>Output Format</ins>:
-```console
-OK
-```
-```console
-Bad Request
-```
 ### Add Profile Photo
 <ins>Command format</ins>:
 ```console
 POST profile_photo ? photo <photo_address>
 ```
-<ins>Output Format</ins>:
-```console
-OK
-```
-```console
-Bad Request
-```
 ### Add Post to Course Channel
 <ins>Command format</ins>:
 ```console
 POST course_post ? id <id> title <title> message <message> image <image_address>
-```
-<ins>Output Format</ins>:
-```console
-OK
-```
-```console
-Bad Request
-```
-```console
-Not Found
-```
-```console
-Permission Denied
 ```
 ### View Course Channel's Posts
 <ins>Command format</ins>:
@@ -151,18 +124,6 @@ GET course_channel ? id <id>
 <post_id> <author_name> “<title>”
 <post_id> <author_name> “<title>” ...
 ```
-```console
-OK
-```
-```console
-Bad Request
-```
-```console
-Not Found
-```
-```console
-Permission Denied
-```
 ### View a Post from Course Channel 
 <ins>Command format</ins>:
 ```console
@@ -174,35 +135,10 @@ GET course_post ? id <id> post_id <post_id>
 <class_number>
 <post_id> <author_name> “<title>” “<message>”
 ```
-```console
-OK
-```
-```console
-Bad Request
-```
-```console
-Not Found
-```
-```console
-Permission Denied
-```
 ### Create a TA Form
 <ins>Command format</ins>:
 ```console
 POST ta_form ? course_id <course_id> message ”<message>”
-```
-<ins>Output Format</ins>:
-```console
-OK
-```
-```console
-Bad Request
-```
-```console
-Not Found
-```
-```console
-Permission Denied
 ```
 ### Close a TA Form
 <ins>Command format</ins>:
@@ -216,64 +152,131 @@ We have received <number_of_requests> requests for the teaching assistant positi
 <second_person_information>:
 ...
 ```
-```console
-Bad Request
-```
-```console
-Not Found
-```
 ### Apply a TA Position
 <ins>Command format</ins>:
 ```console
 POST ta_request ? professor_id <professor_id> form_id <form_id>
-```
-<ins>Output Format</ins>:
-```console
-OK
-```
-```console
-Bad Request
-```
-```console
-Not Found
-```
-```console
-Permission Denied
 ```
 ### Login
 <ins>Command format</ins>:
 ```console
 POST login ? id <id> password <password>
 ```
-<ins>Output Format</ins>:
-```console
-OK
-```
-```console
-Bad Request
-```
-```console
-Not Found
-```
-```console
-Permission Denied
-```
 ### Logout
 <ins>Command format</ins>:
 ```console
 POST logout ?
 ```
+### View Offered Courses
+<ins>Command format</ins>:
+```console
+GET courses ? id <id>
+```
 <ins>Output Format</ins>:
 ```console
-OK
+<id> <name> <capacity> <professor>
 ```
 ```console
-Bad Request
+<id> <name> <capacity> <professor> <time> <exam_date> <class_number>
+```
+### Delete Post
+<ins>Command format</ins>:
+```console
+DELETE post ? id <id>
+```
+### View a User's Personal Page
+<ins>Command format</ins>:
+```console
+GET personal_page ? id <id>
+```
+<ins>Output Format</ins>:
+```console
+<name> <major> <position> <courses>
+<post_id> “<title>”
+<post_id> TA form for <course_name> course ...
 ```
 ```console
-Not Found
+<name> <major> <semester> <courses>
+<post_id> “<title>”
+<post_id> “<title>” ...
 ```
 ```console
-Permission Denied
+UT_account
+<post_id> “<title>”
+<post_id> “<title>” ...
 ```
-### View Offered Courses
+### View a Post
+<ins>Command format</ins>:
+```console
+GET post ? id <id> post_id <post_id>
+```
+<ins>Output Format</ins>:
+```console
+<name> <major> <semester> <courses>
+<post_id> “<title>” “<message>”
+```
+```console
+<name> <major> <position> <courses>
+<post_id> “<title>” “<message>”
+```
+```console
+UT_account
+<post_id> “<title>” “<message>”
+```
+### Connect
+<ins>Command format</ins>:
+```console
+POST connect ? id <id>
+```
+### View Notifications
+<ins>Command format</ins>:
+```console
+GET notification ?
+```
+<ins>Output Format</ins>:
+```console
+<id> <name>: New Post
+```
+```console
+<id> <name>: New Course Offering
+```
+```console
+<id> <name>: Get Course
+```
+```console
+<id> <name>: Delete Course
+```
+```console
+<id> <name>: New Course Post
+```
+```console
+<id> <name>: New Form
+```
+```console
+<id> <name>: Your request to be a teaching assistant has been <rejected/accepted>.
+```
+### Course Offer
+<ins>Command format</ins>:
+```console
+POST course_offer ? course_id <course_id> professor_id <professor_id> capacity <capacity> time <time> exam_date <exam_date> class_number <class_number>
+```
+### Enroll a Course
+<ins>Command format</ins>:
+```console
+PUT my_courses ? id <id>
+```
+### Drop a Course
+<ins>Command format</ins>:
+```console
+DELETE my_courses ? id <id>
+```
+### View Taken Courses
+<ins>Command format</ins>:
+```console
+GET my_courses ?
+```
+<ins>Output Format</ins>:
+```console
+<id> <name> <capacity> <professor> <time> <exam_date> <class_number>
+...
+```
