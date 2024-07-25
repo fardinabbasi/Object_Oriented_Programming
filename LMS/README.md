@@ -44,7 +44,7 @@ Input files are given through command line arguments as shown below:
 
 It is **ensured** that all major_id values used in the files are present in the majors file.
 ## User Types
-Three types of users are implemented: Student, Professor, and Default System User (System Admin). Professor can offer courses, and students can enroll in these courses if they meet the prerequisites. The system admin can add course offerings to the system.
+Three types of users are implemented: `Student`, `Professor`, and `Default System User (System Admin)`. Professor can offer courses, and students can enroll in these courses if they meet the prerequisites. The system admin can add course offerings to the system.
 ## Input Commands and Output Format
 * The usage of the program is such that the user inputs a command along with the required arguments via the command-line interface into the standard input. For example, to get a list of entity information, the user would enter the `GET` command, and if they want to get specific information about a particular entity, they would enter the entity ID after the command to execute the desired action.
 
@@ -85,3 +85,16 @@ If a user enters a command from another user's list of commands, this message wi
 ```console
 Permission Denied
 ```
+
+**Error Handling**
+
+The prioritization of error handling in the execution of the program is as follows:
+
+1. First, it is checked whether the command starts with one of the methods `PUT`, `POST`, `GET`, or `DELETE`. If the command does not start with any of these four keywords, a `Bad Request` error is displayed.
+
+2. Next, it is checked whether the entered command exists in the list of commands; for example, the command `GET <existent_non_something>` is not in the program's commands. In this case, a `Not Found` response should be displayed.
+
+3. Then, access permissions are checked for each command. If access is denied, the user encounters a `Permission Denied` error. This error can occur if the user has not logged in or if a user enters commands intended for a different type of user.
+
+4. Finally, specific cases of each command are examined to ensure that only one of the special cases is encountered (multiple errors should not occur here).
+
