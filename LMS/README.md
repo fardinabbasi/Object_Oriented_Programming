@@ -45,6 +45,9 @@ Input files are given through command line arguments as shown below:
 It is **ensured** that all major_id values used in the files are present in the majors file.
 ## User Types
 Three types of users are implemented: `Student`, `Professor`, and `Default System User (System Admin)`. Professor can offer courses, and students can enroll in these courses if they meet the prerequisites. The system admin can add course offerings to the system.
+
+By default, the `Admin`'s ID and password are set to 0 and UT_account, respectively.
+
 ## Input Commands and Output Format
 * The usage of the program is such that the user inputs a command along with the required arguments via the command-line interface into the standard input. For example, to get a list of entity information, the user would enter the `GET` command, and if they want to get specific information about a particular entity, they would enter the entity ID after the command to execute the desired action.
 
