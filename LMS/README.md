@@ -36,6 +36,12 @@ Some of the information for the program is provided as CSV files. Below is a des
 | position | Each professor's position | String |
 | password | Each professor's password | String |
 
+Input files are given through command line arguments as shown below:
+```console
+./UTms.out majors.csv students.csv courses.csv teachers.csv
+
+```
+
 It is **ensured** that all major_id values used in the files are present in the majors file.
 ## User Types
 Three types of users are implemented: Student, Professor, and Default System User (System Admin). Professor can offer courses, and students can enroll in these courses if they meet the prerequisites. The system admin can add course offerings to the system.
