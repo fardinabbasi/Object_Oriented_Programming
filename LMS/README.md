@@ -38,7 +38,7 @@ Some of the information for the program is provided as CSV files. Below is a des
 
 Input files are given through command line arguments as shown below:
 ```console
-./UTms.out majors.csv students.csv courses.csv teachers.csv
+./utms.out majors.csv students.csv courses.csv teachers.csv
 
 ```
 
